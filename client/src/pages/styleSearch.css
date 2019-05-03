@@ -1,0 +1,10 @@
+#card-container {
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+h4 {
+    margin-top: 5px;
+    margin-left: 30px;
+}

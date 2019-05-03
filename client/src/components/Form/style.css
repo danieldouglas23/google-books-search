@@ -1,0 +1,31 @@
+h4 {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+h6 {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#input-form {
+    width: 1048px;
+    margin-left: 30px;
+}
+
+#book-form {
+    height: 200px;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    background-color: #e9ecef;
+}
+
+#submit-button {
+    float: right;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-left: 30px;
+    
+}
