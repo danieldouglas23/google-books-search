@@ -15,11 +15,12 @@ h6 {
 }
 
 #book-form {
-    height: 200px;
+    height: 190px;
     border: 1px;
     border-color: black;
     border-style: solid;
     background-color: #e9ecef;
+    margin-bottom: 32px;
 }
 
 #submit-button {

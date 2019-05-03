@@ -11,6 +11,10 @@ function App() {
     <Router>
       <>
         <NavBar />
+        <br />
+        <br />
+        <br />
+        <br />
         <div className="container">
           <Jumbotron />
           <Switch>

@@ -1,17 +1,17 @@
 import React from "react";
 import "./style.css";
 
-const Form = () => {
+const Form = (props) => {
     return (
-        <div className="form-group" id="book-form">
+        <form className="form-group" id="book-form">
             <h4>Book Search</h4>
             <br />
             <h6>Book:</h6>
-            <input className="form-control" id="input-form" placeholder="Book Name"/>
-            <button className="btn btn-success" id="submit-button">
+            <input className="form-control" id="input-form" placeholder="Book Name" onChange={props.onChange}/>
+            <button className="btn btn-success" type="submit" id="submit-button" value="Submit" onClick={props.onClick}>
                 Submit
             </button>
-        </div>
+        </form>
     );
 }
 
