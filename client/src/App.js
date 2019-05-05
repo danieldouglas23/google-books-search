@@ -1,5 +1,5 @@
 import React from "react";
-// import Saved from "./pages/Saved";
+import Saved from "./pages/Saved";
 // import NoMatch from "./pages/NoMatch";
 import NavBar from "./components/NavBar";
 import Jumbotron from "./components/Jumbotron";
@@ -20,7 +20,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Search} />
             <Route exact path="/search" component={Search} />
-            {/* <Route path="/saved" component={Saved} />  */}
+            <Route path="/saved" component={Saved} /> 
             {/* <Route component={NoMatch} /> */}
             <Route />
           </Switch>

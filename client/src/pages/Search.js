@@ -3,7 +3,7 @@ import API from "../utils/API";
 // import { Link } from "react-router-dom";
 // import { List, ListItem } from "../components/List";
 import Form from "../components/Form";
-import Card from "../components/Card";
+import ResultCard from "../components/ResultCard";
 import "./styleSearch.css";
 
 class Search extends Component {
@@ -54,11 +54,11 @@ class Search extends Component {
     handleSaveButton = event => {
         // console.log(event)
         event.preventDefault();
-        console.log(this.state.books)
-        let savedBooks = this.state.books.filter(book => book.id === event.target.id)
+        console.log(this.state.bookData)
+        let savedBooks = this.state.bookData.filter(book => book.id === event.target.id)
         savedBooks = savedBooks[0];
         API.saveBook(savedBooks)
-            .then(this.setState({ message: alert("Your book is saved") }))
+            .then(alert("Your book is saved!"))
             .catch(err => console.log(err))
     }
 
@@ -68,7 +68,7 @@ class Search extends Component {
                 <Form onChange={this.handleInputChange} value={this.state.searchedBook} onClick={this.handleFormSubmit} />
                 <div id="card-container">
                     <h4>Results</h4>
-                    <Card bookData={this.state.bookData} onClick={this.handleSaveButton} />
+                    <ResultCard bookData={this.state.bookData} onClick={this.handleSaveButton} />
                 </div>
             </>
         );
