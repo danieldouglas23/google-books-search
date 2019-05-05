@@ -9,7 +9,7 @@ const ResultCard = (props) => {
             {props.bookData.map(bookData => {
                 return (
                     <li id="card-list">
-                        <div className="card">
+                        <div className="card" key={bookData._id} id={bookData.title + "Card"}>
                             <div className="card-header">
 
                                 <div className="row">
@@ -22,7 +22,7 @@ const ResultCard = (props) => {
                                     </div>
                                     <div className="column" id="right-column">
 
-                                        <SaveBtn onClick={props.onClick} />
+                                        <SaveBtn onClick={props.onClick} id={bookData.id} />
                                         <a href={bookData.link} target="_blank">
                                             <ViewBtn />
                                         </a>

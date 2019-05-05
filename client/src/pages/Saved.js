@@ -19,16 +19,6 @@ class Saved extends Component {
             .then(res => this.componentDidMount())
             .catch(err => console.log(err))
     }
-    // handleSaveButton = event => {
-    //     // console.log(event)
-    //     event.preventDefault();
-    //     console.log(this.state.books)
-    //     let savedBooks = this.state.books.filter(book => book.id === event.target.id)
-    //     savedBooks = savedBooks[0];
-    //     API.saveBook(savedBooks)
-    //         .then(this.setState({ message: alert("Your book is saved") }))
-    //         .catch(err => console.log(err))
-    // }
 
     render() {
         return (
