@@ -8,8 +8,8 @@ const ResultCard = (props) => {
         <>
             {props.bookData.map(bookData => {
                 return (
-                    <li id="card-list">
-                        <div className="card" key={bookData._id} id={bookData.title + "Card"}>
+                    <li id="card-list" key={bookData.id} >
+                        <div className="card" id={bookData.title + "Card"}>
                             <div className="card-header">
 
                                 <div className="row">

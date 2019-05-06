@@ -4,25 +4,24 @@ import ViewBtn from "../ViewBtn";
 import DeleteBtn from "../DeleteBtn";
 
 const SavedCard = (props) => {
+    console.log(props)
     return (
         <>
             {props.savedBooks.map(savedBooks => {
                 return (
-                    <li id="card-list">
-                        <div className="card" key={savedBooks._id}>
+                    <li id="card-list" key={savedBooks._id}>
+                        <div className="card">
                             <div className="card-header">
 
                                 <div className="row">
                                     <div className="column" id="left-column">
                                         <h4 id="card-h4"> {savedBooks.title}</h4> <br />
 
-                                        <h5>By: {((savedBooks.author) && (savedBooks.author.length > 1))
-                                            ? (savedBooks.author.reduce((prev, curr) =>
-                                                [prev, ", ", curr])) : savedBooks.author ? savedBooks.author[0] : null}</h5>
+                                        <h5>By: {savedBooks.author}</h5>
                                     </div>
                                     <div className="column" id="right-column">
 
-                                        <DeleteBtn onClick={props.onClick} id={savedBooks.id} />
+                                        <DeleteBtn onClick={props.onClick} id={savedBooks._id} />
                                         <a href={savedBooks.link} target="_blank">
                                             <ViewBtn />
                                         </a>

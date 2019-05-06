@@ -14,9 +14,9 @@ class Saved extends Component {
             .catch(err => console.log(err))
     }
 
-    handleDeleteButton = id => {
-        API.deleteBook(id)
-            .then(res => this.componentDidMount())
+    handleDeleteButton = (event) => {
+        API.deleteBook(event.target.id)
+            .then(res => this.componentDidMount(res))
             .catch(err => console.log(err))
     }
 
