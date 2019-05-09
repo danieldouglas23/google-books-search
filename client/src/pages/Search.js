@@ -54,6 +54,7 @@ class Search extends Component {
     handleSaveButton = event => {
         // console.log(event)
         event.preventDefault();
+        console.log(this.state.bookData);
         let savedBooks = this.state.bookData.filter(book => book.id === event.target.id)
         savedBooks = savedBooks[0];
         console.log(savedBooks);
